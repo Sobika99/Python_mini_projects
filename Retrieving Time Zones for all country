@@ -1,0 +1,13 @@
+import pytz
+import datetime
+import time
+
+for x in sorted(pytz.country_names):
+    print("{} , {} ". format(x, pytz.country_names[x]), end=": ")
+    if x in pytz.country_timezones:
+        for z in sorted(pytz.country_timezones[x]):
+            to_display = pytz.timezone(z)
+            local_time = datetime.datetime.now(tz = to_display)
+            print("{}: {}".format(z, local_time))
+    else:
+        print("Not defined")
