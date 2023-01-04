@@ -1,0 +1,16 @@
+import time
+from time import time as my_timer
+import random
+input("press enter to count")
+
+wait_time = random.randint(0,0)
+time.sleep(wait_time)
+start_time = my_timer()
+input("press enter to stop counting")
+
+end_time = my_timer()
+
+print("Started ar " + time.strftime("%x", time.localtime(start_time)))
+print("Ended ar " + time.strftime("%x", time.localtime(end_time)))
+
+print("TIMER {} in seconds".format(end_time - start_time))
